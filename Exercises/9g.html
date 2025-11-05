@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+
+    <button
+      onclick="
+      Subscribe();
+      "
+      class="js-subscribe"
+    >
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input"
+      onkeydown=" costKeyDown(event);
+    "
+    />
+    <button onclick="calculateTotal()">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+    <script src="JS-Exercises/9g.js"></script>
+  </body>
+</html>

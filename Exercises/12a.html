@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="js-changeTitle">App</title>
+  </head>
+  <body>
+    <button class="js-start-button" onclick="startTimer()">Start</button>
+
+    <button class="js-add-button" onclick="updateText()">Add to Cart</button>
+
+    <p class="js-input"></p>
+
+    <button onclick="addMessage();">Add</button>
+    <button onclick="removeMessage();">Remove</button>
+
+    <script>
+      let messages = 2;
+
+      function addMessage() {
+        messages++;
+        updateTitle();
+      }
+
+      function removeMessage() {
+        if (messages > 0) {
+          messages--;
+        }
+        updateTitle();
+      }
+
+      function updateTitle() {
+        if (messages === 0) {
+          document.title = "Add";
+        } else {
+          document.title = `(${messages}) New messages`;
+        }
+      }
+
+      setInterval(function () {
+        if (document.title === "App") {
+          updateTitle();
+        } else {
+          document.title = "App";
+        }
+      }, 1000);
+
+      /*
+      const add = function () {
+        console.log(2 + 3);
+      };
+      add();
+      add();
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+
+      runTwice(function () {
+        console.log("12b");
+      });
+
+      runTwice(add);
+
+      function startTimer() {
+        const button = document.querySelector(".js-start-button");
+
+        button.innerHTML = "Loading...";
+
+        setTimeout(function () {
+          document.querySelector(".js-start-button").innerHTML = "Finished!";
+        }, 1000);
+      }
+
+      let timeoutId;
+
+      function updateText() {
+        const text = document.querySelector(".js-input");
+
+        text.innerHTML = "Added";
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function () {
+          document.querySelector(".js-input").innerHTML = "";
+        }, 2000);
+      }
+        */
+    </script>
+  </body>
+</html>

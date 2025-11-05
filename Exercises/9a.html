@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <p>9a</p>
+    <button>9a</button>
+    <p>9b</p>
+
+    <button class="next-button">9b</button>
+
+    <p>9c</p>
+
+    <button
+      onclick="document.querySelector('.js-choice').innerHTML = 'You chose heads'"
+    >
+      heads
+    </button>
+
+    <button
+      onclick="document.querySelector('.js-choice').innerHTML = 'You chose tails'"
+    >
+      tails
+    </button>
+
+    <p class="js-choice"></p>
+
+    <p>9d</p>
+    <input placeholder="Name" class="js-name" onkeydown=" costKeyDown(event)" />
+
+    <button onclick="valueText()">Submit</button>
+    <p class="js-result"></p>
+
+    <script src="JS-Exercises/9a.js"></script>
+  </body>
+</html>
